@@ -2,8 +2,32 @@
 .DS_Store
 .AppleDouble
 .LSOverride
-*.swp
-*.swo
+# Icon files
+Icon?
+# Thumbnails
+._*
+# Files that might be created on a Mac volume or network share
+.DocumentRevisions-V100
+.Spotlight-V100
+.Trashes
+VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
 
 # Node modules and npm
 node_modules/
@@ -27,11 +51,7 @@ yarn.lock
 *.launch
 .settings/
 *.swp
-*~
-
-# OS specific files
-Thumbs.db
-ehthumbs.db
+*.swo
 
 # Build and dist directories
 dist/
