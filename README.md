@@ -4,15 +4,6 @@ A clean, simple calculator built with **HTML, CSS, and JavaScript**. Perfect for
 
 ---
 
-## ✨ What Makes It Great
-
-### 🎯 Core Features
-- **Four Essential Operations:** Add, subtract, multiply, and divide with ease
-- **Instant Calculations:** Get your answer the moment you press the equals button
-- **Smart Controls:** Clear everything with `AC` or fix mistakes with the `DEL` button
-- **Clean Interface:** A beautifully designed layout that's easy on the eyes
-- **Works Everywhere:** Fully responsive design that adapts to any screen size—phone, tablet, or desktop
-
 ### 💡 Why You'll Love It
 No distractions. No unnecessary features. Just a calculator that works exactly how you expect it to.
 
