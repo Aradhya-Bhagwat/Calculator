@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧮</text></svg>">
+
+    <script src="script.js" defer></script>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <!-- Floating decorative background gradients -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-info">
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-circle-user"></i>
+                </div>
+                <div class="profile-details">
+                    <h3 id="profile-name">Loading...</h3>
+                    <p id="profile-email">Please wait</p>
+                </div>
+            </div>
+            <button type="button" class="logout-btn" onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i> Logout
+            </button>
+        </div>
+
+        <div class="calculator-card">
+            <div class="calculator-header">
+                <span class="calc-logo"><i class="fa-solid fa-calculator"></i> CALC</span>
+                <span class="calc-version">v1.2</span>
+            </div>
+            <form id="calc-form">
+                <div class="display">
+                    <!-- Readonly keeps manual input neat, let placeholder guide -->
+                    <input type="text" name="display" placeholder="0" readonly>
+                </div>
+                <div class="btn-row">
+                    <input type="button" value="AC" onclick="display.value = ''" class="btn btn-action">
+                    <input type="button" value="DEL" onclick="display.value = display.value.toString().slice(0, -1)"
+                        class="btn btn-action">
+                    <input type="button" value="." onclick="display.value += '.'" class="btn btn-action">
+                    <input type="button" value="÷" onclick="display.value += '÷'" class="btn btn-operator">
+                </div>
+                <div class="btn-row">
+                    <input type="button" value="7" onclick="display.value += '7'" class="btn btn-num">
+                    <input type="button" value="8" onclick="display.value += '8'" class="btn btn-num">
+                    <input type="button" value="9" onclick="display.value += '9'" class="btn btn-num">
+                    <input type="button" value="×" onclick="display.value += '×'" class="btn btn-operator">
+                </div>
+                <div class="btn-row">
+                    <input type="button" value="4" onclick="display.value += '4'" class="btn btn-num">
+                    <input type="button" value="5" onclick="display.value += '5'" class="btn btn-num">
+                    <input type="button" value="6" onclick="display.value += '6'" class="btn btn-num">
+                    <input type="button" value="-" onclick="display.value += '-'" class="btn btn-operator">
+                </div>
+                <div class="btn-row">
+                    <input type="button" value="1" onclick="display.value += '1'" class="btn btn-num">
+                    <input type="button" value="2" onclick="display.value += '2'" class="btn btn-num">
+                    <input type="button" value="3" onclick="display.value += '3'" class="btn btn-num">
+                    <input type="button" value="+" onclick="display.value += '+'" class="btn btn-operator">
+                </div>
+                <div class="btn-row">
+                    <input type="button" value="00" onclick="display.value += '00'" class="btn btn-num">
+                    <input type="button" value="0" onclick="display.value += '0'" class="btn btn-num">
+                    <input type="button" value="=" onclick="display.value = calculate(display.value)"
+                        class="btn btn-equals">
+                </div>
+            </form>
+        </div>
+
+        <div class="history-card">
+            <button type="button" id="history-toggle" class="history-toggle-btn" onclick="viewHistory()">
+                <i class="fa-solid fa-clock-rotate-left"></i> View History
+            </button>
+            <div id="history-panel" class="history-panel collapsed">
+                <div class="history-header">
+                    <h3>History Log</h3>
+                    <button type="button" class="clear-btn" onclick="clearHistory()">
+                        <i class="fa-solid fa-trash-can"></i> Clear
+                    </button>
+                </div>
+                <div id="history-result" class="history-list">
+                    <div class="empty-history">No calculations yet</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
