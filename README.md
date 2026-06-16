@@ -1,6 +1,26 @@
-# 🧮 Calculator Web Application
+# 🧮 Interactive Full-Stack Calculator
 
-A modern, responsive calculator web application featuring secure JWT-based user authentication, calculation history persistence, and a highly flexible database adapter. This project is configured to run on either a **MySQL** (Relational) or **MongoDB** (NoSQL) database engine with a simple toggle in your environment variables.
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+</p>
+
+An elegant, modern full-stack calculator application featuring user authentication, custom display profiles, real-time calculations, and persistent calculation history. 
+
+This project is uniquely engineered to support dynamic database switching, allowing it to interface seamlessly with either **MySQL** or **MongoDB** purely based on your server configuration.
+
+---
+
+## 📸 Preview
+
+<p align="center">
+  <img src="client/Assets/calculator-screenshot.png" alt="Calculator Preview" width="600" />
+</p>
 
 ---
 
@@ -136,6 +156,12 @@ Since the frontend consists of static files:
 
 Here is how the data structures match across the SQL and NoSQL configurations:
 
+### 📐 Entity-Relationship Diagram
+
+<p align="center">
+  <img src="client/Assets/ER.png" alt="Database ER Diagram" width="700" />
+</p>
+
 ### Users
 | Field | MySQL Data Type | MongoDB / Mongoose Type | Description |
 | :--- | :--- | :--- | :--- |
@@ -160,4 +186,7 @@ Here is how the data structures match across the SQL and NoSQL configurations:
 
 Built for learning databases and full-stack web integration.
 
-**Developed by Aradhya Bhagwat**
+🧑💻 Author
+Aradhya Bhagwat
+
+⭐️ If you found this repository helpful or interesting, feel free to give it a star!
