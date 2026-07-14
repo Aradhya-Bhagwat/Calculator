@@ -67,7 +67,7 @@ Follow these steps to configure your local databases, configure the backend serv
 
 ### 1. Clone the Project
 ```bash
-git clone https://github.com/yourusername/Calculator.git
+git clone https://github.com/Aradhya-Bhagwat/Calculator.git
 cd Calculator
 ```
 
